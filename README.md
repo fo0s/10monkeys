@@ -7,7 +7,7 @@
 
 The idea is to host a ruby based web crawler/scraper on a raspberry pi and only running 10 nodes, randomly generate webpages (brute force), scraping non web words and re-create a modern series of novels using only the words found. 
 
-The idea is to see how long the process would take to complete from loading in the novels to be broken down into a readable database to comparing what's been found on the crawl. 
+How long the process would take to complete depends entirely on loading the comparative materials to be broken down into a readable database and comparing what's been found on the crawl. 
 
 Stats can be generated based on the results, namely;
     
