@@ -1,7 +1,11 @@
 # 10monkeys
-> Recreating the [Infinite monkey theorem](https://en.wikipedia.org/wiki/Infinite_monkey_theorem) using a randomised webcrawler/scraper
+> Recreating the [Infinite monkey theorem](https://en.wikipedia.org/wiki/Infinite_monkey_theorem) using Ruby
 
-The idea is to host a ruby based web crawler/scraper on a raspberry pi and only running 10 nodes, randomly generate webpages (brute force), scraping non web words and re-create a modern series of novels. 
+## Flowchart of the logic
+
+![10 monkeys flowchart](images/10monkeys.jpg)
+
+The idea is to host a ruby based web crawler/scraper on a raspberry pi and only running 10 nodes, randomly generate webpages (brute force), scraping non web words and re-create a modern series of novels using only the words found. 
 
 The idea is to see how long the process would take to complete from loading in the novels to be broken down into a readable database to comparing what's been found on the crawl. 
 
