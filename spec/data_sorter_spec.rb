@@ -27,6 +27,10 @@ describe 'Monkey crawler' do
       expect(@monkey.sites_created).to equal 0
     end
 
+    it 'checks if monkey_randomiser_test does what its supposed to' do
+      expect(@monkey.monkey_randomiser_test('')).to eq true
+    end
+
     it 'creates a random string' do
       monkey_site = @monkey.randomize_site
       expect(@monkey.monkey_randomiser_test(monkey_site)).to eq false

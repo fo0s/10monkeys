@@ -1,45 +1,33 @@
-# 10monkeys
+#  ![monkey reading book](images/monkey_reading_book-thumb.png) 10monkeys
 > Recreating the [Infinite monkey theorem](https://en.wikipedia.org/wiki/Infinite_monkey_theorem) using Ruby
 
-## Flowchart of the logic
+### For full documentation on the logic please refer to the [Documentation file](documentation.md)
 
-![10 monkeys flowchart](images/10monkeys.jpg)
+The idea is to host a ruby based web crawler/scraper on a raspberry pi and only running 10 nodes, randomly generate webpages (brute force), scraping non web words and re-create a modern series of novels using only the words found.
 
-The idea is to host a ruby based web crawler/scraper on a raspberry pi and only running 10 nodes, randomly generate webpages (brute force), scraping non web words and re-create a modern series of novels using only the words found. 
-
-How long the process would take to complete depends entirely on loading the comparative materials in to be broken down into a readable database and comparing what's been found on the crawl. 
-
-Stats can be generated based on the results, namely;
-    
-    - How many successful and unsuccessful web hits happened
-    - Average number of words per site
-    - Average number of words in total with a listing of the top 20
-    - Most successful site
-
-There will have to be limitations applied. 
-  
-    - Strict adherence to the [robots.txt](http://www.robotstxt.org/) rules
-    - Any reference to the referral material will cause the crawler to skip the page
-    - Thoughtfulness on the hardware. I'm sure the pi won't be happy with the stress so will have to monitor it and systematically shut it down every now and then causing an impact on the timing and effectiveness of the tests.
+How long the process would take to complete depends entirely on loading the comparative materials in to be broken down into a readable database and comparing what's been found on the crawl.
 
 ## Frameworks used
 
-Nokigiri
+Nokigiri (Web scraping)  
+Smashing.io (To help with the dashboard)
 
 ## To use
 
-Installation and usage instructions here
+### This was developed to be used on a Raspberry pi or any pc that can be left sitting for any number of time. With the results being based purely on luck, the outcome can take anything between a few hours to a few days to complete.
 
-## TODOs
+Clone this repo
 
-1. Intializer
-2. File loader
-3. Web framework
-4. ~~URL Randomizer~~
-5. ~~URL Validator~~
-6. Data sorter
-7. Integration with Goolge Sheets
-8. Data logic comparason 
-9. Basic frontend
-10. Dashboard
+> git clone https://github.com/fo0s/10monkeys.git
+
+Navigate to the folder
+
+> cd 10monkeys
+
+Run Bundler to install dependencies
+
+> sudo bundler install
+
+Reference to Google APIS for database  
+Reference to run the dashboard locally
 
