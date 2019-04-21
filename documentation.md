@@ -1,6 +1,6 @@
 ## Flowchart of the logic
 
-![10 monkeys flowchart](images/10monkeys.jpg)
+![10 monkeys flowchart](views/images/10monkeys.jpg)
 
 Stats can be generated based on the results, namely;
     
