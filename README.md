@@ -1,4 +1,4 @@
-#  ![monkey reading book](images/monkey_reading_book-thumb.png) 10monkeys
+#  ![monkey reading book](views/images/monkey_reading_book-thumb.png) 10monkeys
 > Recreating the [Infinite monkey theorem](https://en.wikipedia.org/wiki/Infinite_monkey_theorem) using Ruby
 
 ### For full documentation on the logic please refer to the [Documentation file](documentation.md)
@@ -7,14 +7,15 @@ The idea is to host a ruby based web crawler/scraper on a raspberry pi and only 
 
 How long the process would take to complete depends entirely on loading the comparative materials in to be broken down into a readable database and comparing what's been found on the crawl.
 
-## Frameworks used
+## Frameworks/Technologies used
 
 Nokigiri (Web scraping)  
-Smashing.io (To help with the dashboard)
+
+Google API (Database)
 
 ## To use
 
-### This was developed to be used on a Raspberry pi or any pc that can be left sitting for any number of time. With the results being based purely on luck, the outcome can take anything between a few hours to a few days to complete.
+### This was developed to be used on a [Raspberry pi](https://www.raspberrypi.org/) or any pc that can be left sitting for any number of time. With the results being based purely on luck, the outcome can take anything between a few hours to a few days to complete.
 
 Clone this repo
 
