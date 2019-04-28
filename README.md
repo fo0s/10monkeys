@@ -1,6 +1,8 @@
 #  ![monkey reading book](views/images/monkey_reading_book-thumb.png) 10monkeys
 > Recreating the [Infinite monkey theorem](https://en.wikipedia.org/wiki/Infinite_monkey_theorem) using Ruby
 
+[![Coverage Status](https://coveralls.io/repos/github/fo0s/10monkeys/badge.svg?branch=master)](https://coveralls.io/github/fo0s/10monkeys?branch=master)
+
 ### For full documentation on the logic please refer to the [Documentation file](documentation.md)
 
 The idea is to host a ruby based web crawler/scraper on a raspberry pi and only running 10 nodes, randomly generate webpages (brute force), scraping non web words and re-create a modern series of novels using only the words found.
