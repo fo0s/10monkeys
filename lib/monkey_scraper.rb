@@ -11,7 +11,7 @@ class MonkeyScrapper
     html = Nokogiri::HTML(open site)
 
     # Shortlist only words that contain letters
-    text  = html.at('body').inner_text.scan(/[a-z]+/i)
+    text = html.at('body').inner_text.scan(/[a-z]+/i)
 
     # Sanity checks
     # -------------
