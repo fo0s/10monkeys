@@ -1,6 +1,5 @@
-task default: [:spec]
-desc 'run Rspec specs'
+require 'rspec/core/rake_task'
 
-task :spec do
-  sh 'rspec spec'
-end
+RSpec::Core::RakeTask.new :spec
+
+task default: [:spec]

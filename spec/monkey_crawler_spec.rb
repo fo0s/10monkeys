@@ -8,10 +8,10 @@ describe 'Monkey crawler' do
       @monkey.monkey_testing_state = true
       @monkey.monkey_crawler
       expect(@monkey.sites_created).to be 1
-    end 
+    end
 
     it 'can save a succesful hit' do
-      @monkey.save_monkeys("test")
+      @monkey.save_monkeys('test')
       expect(@monkey.site_hits).to eq 1
     end
 
@@ -36,11 +36,11 @@ describe 'Monkey crawler' do
     end
 
     it 'verifies an active site' do
-      expect(@monkey.isAlive?("google")).to be true
+      expect(@monkey.isAlive?('google')).to be true
     end
 
     it 'fails a false site' do
-      expect(@monkey.isAlive?("thisshouldreturnfalse")).to be false
+      expect(@monkey.isAlive?('thisshouldreturnfalse')).to be false
     end
   end
 end

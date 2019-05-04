@@ -1,11 +1,15 @@
-source "https://rubygems.org"
+source 'https://rubygems.org'
 
-gem "nokogiri"
-gem "google_drive"
-gem "google-api-client"
-gem "httparty"
-gem "simplecov"
+gem 'google-api-client'
+gem 'google_drive'
+gem 'httparty'
+gem 'nokogiri'
+gem 'rake'
 
 group :test do
-  gem 'rake'
+  gem 'rspec'
+  gem 'rspec-core'
+  gem 'rubocop'
+  gem 'simplecov', require: false
+  gem 'simplecov-console', require: false
 end

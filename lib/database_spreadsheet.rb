@@ -4,7 +4,7 @@ require 'google_drive'
 class GoogleDatabase
   def initialize
     # Find the json file
-    client_secret = Dir.glob('database/*.json').join("")
+    client_secret = Dir.glob('database/*.json').join('')
     # Authenticate a session with your Service Account
     session = GoogleDrive::Session.from_service_account_key(client_secret)
     # Get the spreadsheet by its title

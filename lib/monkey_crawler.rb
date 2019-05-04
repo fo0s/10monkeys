@@ -1,4 +1,4 @@
-require "net/http"
+require 'net/http'
 
 # Crawl my beauties!!
 class MonkeyCrawler
@@ -31,7 +31,7 @@ class MonkeyCrawler
     min_length = rand(1..5)
     max_length = rand(10..30)
 
-    ('a'..'z').to_a.shuffle[min_length,max_length].join
+    ('a'..'z').to_a.shuffle[min_length, max_length].join
   end
 
   def monkey_randomiser_test(query)
@@ -40,12 +40,12 @@ class MonkeyCrawler
 
   def isAlive?(url_str)
     # create workable url
-    site1 = "https://www." + url_str + ".com/"
+    site1 = 'https://www.' + url_str + '.com/'
     # site2 = "https://" + url_str + ".com/"
     begin
       Net::HTTP.get_response(URI.parse(site1)).is_a?(Net::HTTPSuccess)
     # Net::HTTP.get_response(URI.parse(site2)).is_a?(Net::HTTPSuccess)
-    rescue
+    rescue StandardError
       false
     end
   end
