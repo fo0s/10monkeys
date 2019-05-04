@@ -3,8 +3,10 @@ require 'google_drive'
 # Google sheets database interaction
 class GoogleDatabase
   def initialize
+    # Find the json file
+    client_secret = Find.find('/10monkeys/database').select { |p| /.*\.json$/ =~ p }
     # Authenticate a session with your Service Account
-    session = GoogleDrive::Session.from_service_account_key('./../database/client_secret.json')
+    session = GoogleDrive::Session.from_service_account_key(client_secret)
     # Get the spreadsheet by its title
     spreadsheet = session.spreadsheet_by_title('Monkey Database')
     # Get the first worksheet
@@ -17,7 +19,7 @@ class GoogleDatabase
   end
 
   def write_database(input)
-    # inster into specific row
+    # Insert into specific row
     @worksheet.insert_rows(2, input)
     save_worksheet
   end
