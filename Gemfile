@@ -4,6 +4,8 @@ gem "nokogiri"
 gem "google_drive"
 gem "google-api-client"
 gem "httparty"
-gem "byebug"
 gem "simplecov"
-gem "rake"
+
+group :test do
+  gem 'rake'
+end
