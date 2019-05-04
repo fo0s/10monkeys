@@ -2,7 +2,6 @@
 > Recreating the [Infinite monkey theorem](https://en.wikipedia.org/wiki/Infinite_monkey_theorem) using Ruby
 
 [![Coverage Status](https://coveralls.io/repos/github/fo0s/10monkeys/badge.svg?branch=master)](https://coveralls.io/github/fo0s/10monkeys?branch=master)
-
 [![Build Status](https://travis-ci.org/fo0s/10monkeys.svg?branch=master)](https://travis-ci.org/fo0s/10monkeys)
 
 ### For full documentation on the logic please refer to the [Documentation file](documentation.md)
