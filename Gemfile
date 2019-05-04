@@ -7,6 +7,7 @@ gem 'nokogiri'
 gem 'rake'
 
 group :test do
+  gem 'coveralls', require: false
   gem 'rspec'
   gem 'rspec-core'
   gem 'rubocop'
