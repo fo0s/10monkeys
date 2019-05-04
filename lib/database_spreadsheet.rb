@@ -4,7 +4,7 @@ require 'google_drive'
 class GoogleDatabase
   def initialize
     # Find the json file
-    client_secret = Find.find('/10monkeys/database').select { |p| /.*\.json$/ =~ p }
+    client_secret = Dir.glob('database/*.json').join("")
     # Authenticate a session with your Service Account
     session = GoogleDrive::Session.from_service_account_key(client_secret)
     # Get the spreadsheet by its title
@@ -20,34 +20,33 @@ class GoogleDatabase
 
   def write_database(input)
     # Insert into specific row
-    @worksheet.insert_rows(2, input)
+    @worksheet.insert_rows(1, input)
     save_worksheet
   end
 
-  def update_database
+  def update_database(input, row, col)
     # Update targeted cell. This could also be "A2"
-    @worksheet[2, 1] = 'Updated!'
+    @worksheet[row, col] = input
     save_worksheet
   end
 
   def delete_database
     # Deletes a row
-    @worksheet.delete_rows(2, 1)
+    @worksheet.delete_rows(1, 1)
     save_worksheet
   end
 
-  def update_whole_database(file)
-    @worksheet.update_from_file('./path_to_file.csv')
-    save_worksheet
-  end
+  # def update_whole_database(file)
+  #   @worksheet.update_from_file('./path_to_file.csv')
+  #   save_worksheet
+  # end
 
-  def export_whole_database
-    @worksheet.export_as_string('./path_to_save, format = csv')
-    save_worksheet
-  end
+  # def export_whole_database
+  #   @worksheet.export_as_string('./path_to_save, format = csv')
+  #   save_worksheet
+  # end
 
   def save_worksheet
     @worksheet.save
-    puts 'Database saved'
   end
 end
