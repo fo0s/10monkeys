@@ -1,6 +1,209 @@
-<div class="grid-container">
-  <header class="header"></header>
-  <aside class="sidenav"></aside>
-  <main class="main"></main>
-  <footer class="footer"></footer>
-</div>
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr; /* Side nav is hidden on mobile */
+    grid-template-rows: 50px 1fr 50px;
+    grid-template-areas:
+      'header'
+      'main'
+      'footer';
+}
+
+.main {
+    grid-area: main;
+    background-color: rgb(207, 207, 207);
+}
+  
+.footer {
+    grid-area: footer;
+    background-color: #afafaf6e;
+    height: 80px;
+}
+
+.footer__copyright {
+  margin-right: 30%;
+  font-size: 20px;
+}
+
+.footer__signature {
+  font-weight: 500;
+  text-align: right;
+  text-indent: 10px;
+  letter-spacing: 3px;
+  word-spacing: 4px;
+  background-color: rgba(245, 245, 245, 0.3);
+  border-radius: 10px;
+}
+
+.footer__credit {
+  font-size: 80px;
+  font-weight: 100;
+}
+
+.footer__author {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.header {
+    grid-area: header;
+    background-color: #e2dcdcea;
+}
+
+.header__avatar {
+  background: url("../images/monkey_reading_book-thumb.png");
+  max-width: 100%;
+  height: auto;
+}
+
+.header, .footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 16px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.sidenav {
+    grid-area: sidenav;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 240px;
+    position: fixed;
+    overflow-y: auto;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16), 0 0 0 1px rgba(0, 0, 0, 0.08);
+    z-index: 2; /* Needs to sit above the hamburger menu icon */
+    background-color: #57659785;
+    transform: translateX(-245px);
+    transition: all .6s ease-in-out;
+  }
+
+  .sidenav.active {
+    transform: translateX(0);
+  }
+
+  .sidenav__close-icon {
+    position: absolute;
+    visibility: visible;
+    top: 8px;
+    right: 12px;
+    cursor: pointer;
+    font-size: 20px;
+    color: #ddd;
+  }
+
+.sidenav__list {
+    padding: 0;
+    margin-top: 85px;
+    list-style-type: none;
+}
+
+.sidenav__list-item {
+    padding: 20px 20px 20px 40px;
+    color: rgb(255, 255, 255);
+}
+
+.sidenav__list-item:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+}
+
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+    padding: 20px;
+    height: 150px; /* Force our height since we don't have actual content yet */
+    background-color: #e3e4e6;
+    color: slategray;
+  }
+
+  .main-overview {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(265px, 1fr)); /* Where the magic happens */
+    grid-auto-rows: 94px;
+    grid-gap: 20px;
+    margin: 20px;
+  }
+  
+  .overviewcard {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #d3d3;
+  }
+
+  .main-cards {
+    column-count: 1;
+    column-gap: 20px;
+    margin: 20px;
+  }
+  
+  .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background-color: #82bef6;
+    margin-bottom: 20px;
+    -webkit-column-break-inside: avoid;
+    padding: 24px;
+    box-sizing: border-box;
+  }
+  /* Force varying heights to simulate dynamic content */
+  .card:first-child {
+    height: 485px;
+  }
+  .card:nth-child(2) {
+    height: 200px;
+  }
+  .card:nth-child(3) {
+    height: 265px;
+  }
+
+/* Non-mobile styles, 750px breakpoint */
+@media only screen and (min-width: 46.875em) {
+    /* Show the sidenav */
+    .grid-container {
+        grid-template-columns: 240px 1fr; /* Show the side nav for non-mobile screens */
+        grid-template-areas:
+        "sidenav header"
+        "sidenav main"
+        "sidenav footer";
+    }
+    .sidenav {
+        position: relative; /* Fixed position on mobile */
+        transform: translateX(0);
+      }
+    
+      .sidenav__close-icon {
+        visibility: hidden;
+      }
+}
+
+/* Medium-sized screen breakpoint (tablet, 1050px) */
+@media only screen and (min-width: 65.625em) {
+    /* Break out main cards into two columns */
+    .main-cards {
+       column-count: 2;
+    }
+}
+
+.menu-icon {
+    position: fixed;
+    display: flex;
+    top: 5px;
+    left: 10px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    z-index: 1;
+    cursor: pointer;
+    padding: 12px;
+    background-color: #DADAE3;
+  }
+
+  .header__search {
+    margin-left: 42px;
+  }
