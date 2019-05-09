@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+gem 'coveralls', require: false
+
 gem 'google-api-client'
 gem 'google_drive'
 gem 'httparty'
@@ -7,7 +9,6 @@ gem 'nokogiri'
 gem 'rake'
 
 group :test do
-  gem 'coveralls', require: false
   gem 'rspec'
   gem 'rspec-core'
   gem 'rubocop'

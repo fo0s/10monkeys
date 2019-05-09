@@ -1,82 +1,79 @@
-<!DOCTYPE html>
 
-<html>
-  <head>
-    <title>Infinite monkey theorem</title>
-    <link rel="stylesheet" type="text/css" href="./css/dashboard.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous"></head>
+<head>
+<title>Infinite monkey theorem</title>
+<link rel="stylesheet" type="text/css" href="./css/dashboard.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous"></head>
 
-  <body>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="javascript/dashboard.js"></script>
+<body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="javascript/dashboard.js"></script>
+    <div class="grid-container">
+
         <div class="grid-container">
+            <div class="menu-icon">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+                
+        <aside class="sidenav">
+            <div class="sidenav__close-icon">
+                <i class="fas fa-times"></i>
+            </div>
+        </aside>
+        
+        
+        <header class="header">
+            <div class="header__search">Search...</div>
+            <div class="header__avatar"></div>
+        </header>
 
-            <div class="grid-container">
-                <div class="menu-icon">
-                    <i class="fas fa-bars"></i>
+        <aside class="sidenav">
+            <ul class="sidenav__list">
+                <li class="sidenav__list-item">Item One</li>
+                <li class="sidenav__list-item">Item Two</li>
+                <li class="sidenav__list-item">Item Three</li>
+                <li class="sidenav__list-item">Item Four</li>
+                <li class="sidenav__list-item">Item Five</li>
+            </ul>
+        </aside>
+
+        <main class="main">
+            <div class="main-header">
+                <div class="main-header__heading">Hello User</div>
+                <div class="main-header__updates">Recent Items</div>
+            </div>
+
+            <div class="main-overview">
+                <div class="overviewcard">
+                    <div class="overviewcard__icon">Overview</div>
+                    <div class="overviewcard__info">Card</div>
+                </div>
+                <div class="overviewcard">
+                    <div class="overviewcard__icon">Overview</div>
+                    <div class="overviewcard__info">Card</div>
+                </div>
+                <div class="overviewcard">
+                    <div class="overviewcard__icon">Overview</div>
+                    <div class="overviewcard__info">Card</div>
+                </div>
+                <div class="overviewcard">
+                    <div class="overviewcard__icon">Overview</div>
+                    <div class="overviewcard__info">Card</div>
                 </div>
             </div>
-                    
-            <aside class="sidenav">
-                <div class="sidenav__close-icon">
-                    <i class="fas fa-times"></i>
-                </div>
-            </aside>
-            
-            
-            <header class="header">
-                <div class="header__search">Search...</div>
-                <div class="header__avatar"></div>
-            </header>
 
-            <aside class="sidenav">
-                <ul class="sidenav__list">
-                    <li class="sidenav__list-item">Item One</li>
-                    <li class="sidenav__list-item">Item Two</li>
-                    <li class="sidenav__list-item">Item Three</li>
-                    <li class="sidenav__list-item">Item Four</li>
-                    <li class="sidenav__list-item">Item Five</li>
-                </ul>
-            </aside>
-
-            <main class="main">
-                <div class="main-header">
-                    <div class="main-header__heading">Hello User</div>
-                    <div class="main-header__updates">Recent Items</div>
-                </div>
-
-                <div class="main-overview">
-                    <div class="overviewcard">
-                        <div class="overviewcard__icon">Overview</div>
-                        <div class="overviewcard__info">Card</div>
-                    </div>
-                    <div class="overviewcard">
-                        <div class="overviewcard__icon">Overview</div>
-                        <div class="overviewcard__info">Card</div>
-                    </div>
-                    <div class="overviewcard">
-                        <div class="overviewcard__icon">Overview</div>
-                        <div class="overviewcard__info">Card</div>
-                    </div>
-                    <div class="overviewcard">
-                        <div class="overviewcard__icon">Overview</div>
-                        <div class="overviewcard__info">Card</div>
-                    </div>
-                </div>
-
-                <div class="main-cards">
-                    <div class="card">Card</div>
-                    <div class="card">Card</div>
-                    <div class="card">Card</div>
-                </div>
-            </main>
-            
-            <footer class="footer">
-                <div class="footer__copyright">&copy; 2019</div>
-                <div class="footer__signature">“We've all heard that a million monkeys banging on a million typewriters will eventually reproduce the entire works of Shakespeare. Now, thanks to the Internet, we know this is not true.” </div>
-                <div class="footer__credit">}</div>
-                <div class="footer__author">Robert Wilensky</div>
-            </footer>
-        </div>
-    </body>
-</html>
+            <div class="main-cards">
+                <div class="card">Card</div>
+                <div class="card">Card</div>
+                <div class="card">Card</div>
+            </div>
+        </main>
+        
+        <footer class="footer">
+            <div class="footer__copyright">&copy; 2019</div>
+            <div class="footer__signature">“We've all heard that a million monkeys banging on a million typewriters will eventually reproduce the entire works of Shakespeare. Now, thanks to the Internet, we know this is not true.” </div>
+            <div class="footer__credit">}</div>
+            <div class="footer__author">Robert Wilensky</div>
+        </footer>
+    </div>
+</body>
