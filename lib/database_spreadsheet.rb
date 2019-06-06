@@ -2,20 +2,32 @@ require 'google_drive'
 
 # Google sheets database interaction
 class GoogleDatabase
+  attr_reader :google_database, :spreadsheet
+
   def initialize
+    @google_database = []
     # Find the json file
     client_secret = Dir.glob('database/*.json').join('')
     # Authenticate a session with your Service Account
     session = GoogleDrive::Session.from_service_account_key(client_secret)
     # Get the spreadsheet by its title
-    spreadsheet = session.spreadsheet_by_title('Monkey Database')
-    # Get the first worksheet
-    @worksheet = spreadsheet.worksheets.first
+    @spreadsheet = session.spreadsheet_by_title('Monkey Database')
   end
 
+  def worksheet_database(type)
+    case type
+    when :book
+      @worksheet = @spreadsheet.worksheet_by_title('Book')
+    when :web
+      @worksheet = @spreadsheet.worksheet_by_title('Web')
+    end
+  end
+
+
   def read_database
-    # Print out the first 3 columns of each row
-    @worksheet.rows.each { |row| puts row.first(3).join(',') }
+    @google_database = []
+    # Print out the first 2 columns of each row
+    @worksheet.rows.each { |row| @google_database << row.first(2).join(',') }
   end
 
   def write_database(input)
@@ -45,6 +57,11 @@ class GoogleDatabase
   #   @worksheet.export_as_string('./path_to_save, format = csv')
   #   save_worksheet
   # end
+
+  def delete_whole_database
+    @worksheet.delete_rows(1, @worksheet.num_rows)
+    save_worksheet
+  end
 
   def save_worksheet
     @worksheet.save

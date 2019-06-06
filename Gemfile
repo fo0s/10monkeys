@@ -9,6 +9,7 @@ gem 'nokogiri'
 gem 'rake'
 
 group :test do
+  gem 'capybara'
   gem 'rspec'
   gem 'rspec-core'
   gem 'rubocop'

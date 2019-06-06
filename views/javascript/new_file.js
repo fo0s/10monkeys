@@ -2,7 +2,7 @@ $(document).ready(function () {
     setTimeout(function () {
         var content = [{
             title: "Welcome to 10monkeys!",
-            desc: 'My interpretation of the infinite monkey theorem. \nPlease scroll down to get started...'
+            desc: "Please scroll down to get started..."
         }, {
             title: "Title",
             desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"

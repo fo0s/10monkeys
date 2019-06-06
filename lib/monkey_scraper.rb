@@ -29,7 +29,7 @@ class MonkeyScrapper
     Hash[
       words.group_by(&:downcase).map do |word, instances|
         [word, instances.length]
-      end.sort_by(&:last).reverse
+      end.sort_by(&:last).reverse!
     ]
   end
 end

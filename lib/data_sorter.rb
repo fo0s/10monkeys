@@ -21,5 +21,7 @@ class ComparativeData
     hash_values.sort_by { |value| value[1] }.each do |element|
       @output << [element[0], element[1]]
     end
+
+    return true
   end
 end
