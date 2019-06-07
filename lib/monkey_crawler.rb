@@ -5,20 +5,26 @@ class MonkeyCrawler
   attr_accessor :run_monkey, :monkey_testing_state
   attr_reader :monkeys, :site_hits, :sites_created
 
+
+
   def initialize
     @run_monkey = true
     @monkey_testing_state = false
     @monkeys = []
     @site_hits = 0
     @sites_created = 0
+    @domains = ['.com', '.io', '.gov', '.edu', '.net', '.org', '.xyz', '.tech' ]
   end
 
   def monkey_crawler
     while @run_monkey == true
       @sites_created += 1
       site = randomize_site
-      save_monkeys(site) if isAlive?(site)
-      break if @monkey_testing_state == true
+      @domains.each do |domain|
+        site_check = 'https://www' + site + domain
+        save_monkeys(site_check) if isAlive?(site_check)
+      end
+        break if @monkey_testing_state == true
     end
   end
 
@@ -39,12 +45,8 @@ class MonkeyCrawler
   end
 
   def isAlive?(url_str)
-    # create workable url
-    site1 = 'https://www.' + url_str + '.com/'
-    # site2 = "https://" + url_str + ".com/"
     begin
-      Net::HTTP.get_response(URI.parse(site1)).is_a?(Net::HTTPSuccess)
-    # Net::HTTP.get_response(URI.parse(site2)).is_a?(Net::HTTPSuccess)
+      Net::HTTP.get_response(URI.parse(url_str)).is_a?(Net::HTTPSuccess)
     rescue StandardError
       false
     end
