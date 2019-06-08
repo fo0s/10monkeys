@@ -5,8 +5,6 @@ class MonkeyCrawler
   attr_accessor :run_monkey, :monkey_testing_state
   attr_reader :monkeys, :site_hits, :sites_created
 
-
-
   def initialize
     @run_monkey = true
     @monkey_testing_state = false
@@ -20,8 +18,10 @@ class MonkeyCrawler
     while @run_monkey == true
       @sites_created += 1
       site = randomize_site
+      system 'clear'
+      printf "Sites created: #{@sites_created}. Site hits: #{@site_hits}. Current attempt: #{site}"
       @domains.each do |domain|
-        site_check = 'https://www' + site + domain
+        site_check = 'https://www.' + site + domain
         save_monkeys(site_check) if isAlive?(site_check)
       end
         break if @monkey_testing_state == true

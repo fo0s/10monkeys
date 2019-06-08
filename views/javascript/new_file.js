@@ -53,7 +53,7 @@ $(document).ready(function () {
                     left: $(".position-data:eq(" + currentPage + ") > .soup-title > .letter").eq(i).offset().left + "px",
                     top: $(".position-data:eq(" + currentPage + ") > .soup-title > .letter").eq(i).offset().top + "px",
                     color: "#111",
-                    zIndex: 9001
+                    zIndex: 1
                 });
             }
             for (var i = 0; i < content[currentPage].desc.length; i++) {
@@ -61,7 +61,7 @@ $(document).ready(function () {
                     left: $(".position-data:eq(" + currentPage + ") > .soup-desc > .letter").eq(i).offset().left + "px",
                     top: $(".position-data:eq(" + currentPage + ") > .soup-desc > .letter").eq(i).offset().top + "px",
                     color: "#111",
-                    zIndex: 9001
+                    zIndex: 1
                 });
             }
         }

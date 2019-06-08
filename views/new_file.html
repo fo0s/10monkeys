@@ -1,59 +1,77 @@
 <head>
     <link rel="stylesheet" type="text/css" href="./css/new_file.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> 
-    <script src="./javascript/new_file.js"></script>
-</head>
-
+    <script src="./javascript/new_file.js"></script></head>
 <body>
 
-    <div class="parallax_header parallax__group">
-        <div id="soup-container">
+<div class="parallax">
+    <div id="group1" class="parallax-group">
+        <div class="parallax-layer parallax-layer-base">
+                <div class="parallax_header parallax__group">
+                    <div id="soup-container"></div>
+                </div>
+
+                <div id="loader"></div>
+
+                <div id="segments"></div>
+
+            <div class="dot_sentance>">
+                <div class="dot_sentance__center">
+                    <div class='sentance__half'>
+                        <span class="sentance__left sentance-left">It always starts</span>
+                    </div>
+
+                    <span class="sentance__half_dot sentance-dot-wait">
+                        <span class='dot sentance-dot'></span>
+                    </span>
+
+                    <span class="sentance__half">
+                        <span class="sentance__right sentance-right">with an idea.</span>
+                    </span>
                 </div>
             </div>
-
-            <div id="loader"></div>
-
-            <div id="segments"></div>
         </div>
-        <div class="dot_sentance>">
-            <div class="dot_sentance__center">
-        <div class='sentance__half'>
-            <span class="sentance__left sentance-left">It always starts</span>
-        </div>
-
-        <span class="sentance__half_dot sentance-dot-wait">
-            <span class='dot sentance-dot'></span>
-        </span>
-
-        <span class="sentance__half">
-            <span class="sentance__right sentance-right">with an idea.</span>
-        </span>
-    </div>
-    <br><br>
-    <div class="parallax_mid parallax__group">
-
-            <div class="parallex__layer parallax__layer--fore">
-                <div class="title">We've all heard that a million monkeys banging on a</div>
-            </div>
-
-            <div class="parallax__layer parallax__layer--base">
-                <div class="title">million typewriters will eventually reproduce the entire works of Shakespeare.</div>
-            </div>
-            
-            <div class="parallax__layer parallax__layer--back">
-                <div class="title">Now, thanks to the Internet, we know this is not true.</div>
-            </div>
-
-            <div class="parallax__layer parallax__layer--deep">
-                <div class="title">Robert Wilensky</div>
-            </div>
-
-    </div>
-    <div class="parallax_dash parallax__group">
-
     </div>
 
-    <div class="parallax_foot parallax__group">
+    <!-- Group 3 -->
+  <div id="group3" class="parallax-group">
+    
+    <div class="parallax-layer parallax-layer-fore-high">
+      <div class="parallax-content">
+        High Foreground Layer
+      </div>
     </div>
+    
+    <div class="parallax-layer parallax-layer-fore">
+      <div class="parallax-content">
+        Foreground Layer
+      </div>
+    </div>
+    
+    <div class="parallax-layer parallax-layer-base">
+      <div class="parallax-content">
+        Base Layer
+      </div>
+    </div>
+
+    <div class="parallax-layer parallax-layer-deep-bg">
+      <div class="parallax-content">
+        Deep Background Layer
+      </div>
+    </div>
+    
+  </div>
+  
+  <!-- Group 1 -->
+  <div id="group1" class="parallax-group">
+    
+    <div class="parallax-layer parallax-layer-base">
+      <div class="parallax-content">
+        Base Layer
+      </div>
+    </div>
+    
+  </div>
+</div>
+
 </body>
-
