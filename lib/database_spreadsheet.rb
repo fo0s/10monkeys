@@ -23,7 +23,6 @@ class GoogleDatabase
     end
   end
 
-
   def read_database
     @google_database = []
     # Print out the first 2 columns of each row

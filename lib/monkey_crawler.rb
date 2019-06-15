@@ -11,7 +11,7 @@ class MonkeyCrawler
     @monkeys = []
     @site_hits = 0
     @sites_created = 0
-    @domains = ['.com', '.io', '.gov', '.edu', '.net', '.org', '.xyz', '.tech' ]
+    @domains = ['.com', '.io', '.gov', '.edu', '.net', '.org', '.xyz', '.tech']
   end
 
   def monkey_crawler
@@ -24,7 +24,7 @@ class MonkeyCrawler
         site_check = 'https://www.' + site + domain
         save_monkeys(site_check) if isAlive?(site_check)
       end
-        break if @monkey_testing_state == true
+      break if @monkey_testing_state == true
     end
   end
 
@@ -45,10 +45,8 @@ class MonkeyCrawler
   end
 
   def isAlive?(url_str)
-    begin
-      Net::HTTP.get_response(URI.parse(url_str)).is_a?(Net::HTTPSuccess)
-    rescue StandardError
-      false
-    end
+    Net::HTTP.get_response(URI.parse(url_str)).is_a?(Net::HTTPSuccess)
+  rescue StandardError
+    false
   end
 end
