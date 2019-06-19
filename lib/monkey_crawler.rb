@@ -20,7 +20,6 @@ class MonkeyCrawler
 	monkey3 = Thread.new{monkey_crawler()}
 	monkey4 = Thread.new{monkey_crawler()}
 	monkey5 = Thread.new{monkey_crawler()}
-  end
 
   def monkey_crawler
     while @run_monkey == true
@@ -30,7 +29,7 @@ class MonkeyCrawler
         site_check = 'https://www.' + site + domain
         save_monkeys(site_check) if isAlive?(site_check)
       end
-        break if @monkey_testing_state == true
+      break if @monkey_testing_state == true
     end
   end
 
@@ -51,10 +50,8 @@ class MonkeyCrawler
   end
 
   def isAlive?(url_str)
-    begin
-      Net::HTTP.get_response(URI.parse(url_str)).is_a?(Net::HTTPSuccess)
-    rescue StandardError
-      false
-    end
+    Net::HTTP.get_response(URI.parse(url_str)).is_a?(Net::HTTPSuccess)
+  rescue StandardError
+    false
   end
 end

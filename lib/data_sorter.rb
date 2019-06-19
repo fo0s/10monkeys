@@ -22,6 +22,6 @@ class ComparativeData
       @output << [element[0], element[1]]
     end
 
-    return true
+    true
   end
 end
