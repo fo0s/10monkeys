@@ -1,5 +1,5 @@
 require 'nokogiri'
-require 'open-uri'
+# require 'open-uri'
 require 'pp'
 
 # Scrapes words off the site
@@ -15,7 +15,6 @@ class MonkeyScrapper
     # Sanity checks
     # -------------
 
-    # byebug
     # pp text.length, text.uniq.length, text.uniq.sort[0..10]
 
     # -------------
@@ -29,7 +28,7 @@ class MonkeyScrapper
     Hash[
       words.group_by(&:downcase).map do |word, instances|
         [word, instances.length]
-      end.sort_by(&:last).reverse!
+      end.sort_by(&:first)
     ]
   end
 end

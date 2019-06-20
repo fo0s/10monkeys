@@ -78,6 +78,7 @@
       ],
       "/home/bart/Desktop/10monkeys/lib/database_spreadsheet.rb": [
         1,
+        1,
         null,
         null,
         1,
@@ -99,7 +100,6 @@
         4,
         null,
         3,
-        null,
         null,
         null,
         null,
@@ -151,7 +151,6 @@
         1,
         null,
         1,
-        null,
         4,
         null,
         1,
@@ -176,8 +175,6 @@
         1,
         1,
         1,
-        null,
-        null,
         null,
         null
       ],
@@ -280,12 +277,10 @@
         2,
         null,
         null,
-        11,
-        null,
+        1,
         10,
-        9,
-        9,
         null,
+        9,
         null,
         null
       ],
@@ -303,7 +298,6 @@
         null,
         null,
         3,
-        null,
         null,
         null,
         null,
@@ -388,6 +382,6 @@
         null
       ]
     },
-    "timestamp": 1560950574
+    "timestamp": 1561032915
   }
 }

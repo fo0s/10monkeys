@@ -2,8 +2,8 @@ require 'net/http'
 
 # Crawl my beauties!!
 class MonkeyCrawler
-  attr_accessor :run_monkey, :monkey_testing_state
-  attr_reader :monkeys, :site_hits, :sites_created
+  attr_accessor :run_monkey, :monkey_testing_state, :monkeys
+  attr_reader :site_hits, :sites_created
 
   def initialize
     @run_monkey = true
@@ -20,6 +20,7 @@ class MonkeyCrawler
 	monkey3 = Thread.new{monkey_crawler()}
 	monkey4 = Thread.new{monkey_crawler()}
 	monkey5 = Thread.new{monkey_crawler()}
+  end
 
   def monkey_crawler
     while @run_monkey == true
