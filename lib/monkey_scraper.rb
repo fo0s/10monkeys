@@ -1,12 +1,12 @@
 require 'nokogiri'
-# require 'open-uri'
+require 'open-uri'
 require 'pp'
 
 # Scrapes words off the site
 class MonkeyScrapper
   attr_reader :result
 
-  def monkey_scraper(site)
+  def scrape(site)
     html = Nokogiri::HTML(open(site))
 
     # Shortlist only words that contain letters

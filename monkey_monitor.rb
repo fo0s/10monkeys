@@ -1,14 +1,16 @@
-require_relative "monkey_crawler.rb"
-require_relative "monkey_scraper.rb"
-require_relative "database_spreadsheet.rb"
+require_relative "./lib/monkey_crawler.rb"
+require_relative "./lib/monkey_scraper.rb"
+require_relative "./lib/database_spreadsheet.rb"
 
+require "google_drive"
 require "time"
 
 def monkey_monitor	
 	# Setup
 	@scraper = MonkeyScrapper.new
+	@start_time = Time.now
 	@mdata = GoogleDatabase.new
-	@mdata.worksheet_database(:book)
+	@mdata.worksheet_database(:web)
 	
 	# Initiate crawlers
 	puts "Creating 5 monkeys"
@@ -31,15 +33,16 @@ end
 def monkey_menu(input)
 	case input
 	when "1"
-		puts "At #{Time.now}. #{@monkey.sites_created} created. #{@monkey.site_hits} hits"
+		puts "Started: #{@start_time}. Now: #{Time.now}. "
+		puts "#{@monkey.sites_created} created. #{@monkey.site_hits} hits"
 	when "2"
 		puts "The sites found are: #{@monkey.monkeys}."
 	when "3"
 	
 		@monkey.monkeys.each do |site|
 			p site
-			@scraper.monkey_scraper(site)
-			@mdata.write_database(@scraper.result)
+			scraper_result = @scraper.scrape(site)
+			@mdata.write_database(scraper_result)
 		end
 		puts "done"
 	when "4"
@@ -49,6 +52,8 @@ def monkey_menu(input)
 		puts "I don't recognise that"
 	end
 end
+
+# htpps://www.unbk.net
 
 # TODO 
 # 1. Be able to merge results
