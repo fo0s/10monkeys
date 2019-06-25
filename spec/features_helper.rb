@@ -25,7 +25,7 @@ end
 
 def monkey_connects_and_scrapes
   @feature_monkey = MonkeyScrapper.new
-  @feature_monkey.monkey_scraper('http://itcorp.com/')
+  @feature_monkey.scrape('http://itcorp.com/')
 end
 
 def monkey_saves_cleaned_material

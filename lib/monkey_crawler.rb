@@ -2,8 +2,8 @@ require 'net/http'
 
 # Crawl my beauties!!
 class MonkeyCrawler
-  attr_accessor :run_monkey, :monkey_testing_state
-  attr_reader :monkeys, :site_hits, :sites_created
+  attr_accessor :run_monkey, :monkey_testing_state, :monkeys
+  attr_reader :site_hits, :sites_created
 
   def initialize
     @run_monkey = true
@@ -11,15 +11,21 @@ class MonkeyCrawler
     @monkeys = []
     @site_hits = 0
     @sites_created = 0
-    @domains = ['.com', '.io', '.gov', '.edu', '.net', '.org', '.xyz', '.tech']
+    @domains = [ '.com', '.io', '.gov', '.edu', '.net', '.org', '.xyz', '.tech' ]
+  end
+  
+  def start_monkeys
+	monkey1 = Thread.new{monkey_crawler()}
+	monkey2 = Thread.new{monkey_crawler()}
+	monkey3 = Thread.new{monkey_crawler()}
+	monkey4 = Thread.new{monkey_crawler()}
+	monkey5 = Thread.new{monkey_crawler()}
   end
 
   def monkey_crawler
     while @run_monkey == true
       @sites_created += 1
       site = randomize_site
-      system 'clear'
-      printf "Sites created: #{@sites_created}. Site hits: #{@site_hits}. Current attempt: #{site}"
       @domains.each do |domain|
         site_check = 'https://www.' + site + domain
         save_monkeys(site_check) if isAlive?(site_check)
@@ -34,8 +40,8 @@ class MonkeyCrawler
   end
 
   def randomize_site
-    min_length = rand(1..5)
-    max_length = rand(10..30)
+	min_length = 2
+    max_length = rand(4..12)
 
     ('a'..'z').to_a.shuffle[min_length, max_length].join
   end
