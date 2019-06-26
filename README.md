@@ -20,6 +20,12 @@ Google API (Database)
 
 ### This was developed to be used on a [Raspberry pi](https://www.raspberrypi.org/) or any pc that can be left sitting for any number of time. With the results being based purely on luck, the outcome can take anything between a few hours to a few days to complete.
 
+---
+
+## Landing page demo
+
+![Landing page](views/images/monkey_front.gif)
+
 Clone this repo
 
 > git clone https://github.com/fo0s/10monkeys.git
