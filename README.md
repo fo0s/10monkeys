@@ -16,15 +16,17 @@ Nokigiri (Web scraping)
 
 Google API (Database)
 
-## To use
-
-### This was developed to be used on a [Raspberry pi](https://www.raspberrypi.org/) or any pc that can be left sitting for any number of time. With the results being based purely on luck, the outcome can take anything between a few hours to a few days to complete.
-
 ---
 
 ## Landing page demo
 
 ![Landing page](views/images/monkey_front.gif)
+
+## To use
+
+### This was developed to be used on a [Raspberry pi](https://www.raspberrypi.org/) or any pc that can be left sitting for any number of time. With the results being based purely on luck, the outcome can take anything between a few hours to a few days to complete.
+
+---
 
 Clone this repo
 
