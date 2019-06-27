@@ -114,3 +114,9 @@ $(document).ready(function () {
     }
   }, 4000);
 });
+
+$("figure").mouseleave(
+  function () {
+    $(this).removeClass("hover");
+  }
+);
