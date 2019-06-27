@@ -1,7 +1,7 @@
 #  ![monkey reading book](views/images/monkey_standby.png) 10monkeys
 > Recreating the [Infinite monkey theorem](https://en.wikipedia.org/wiki/Infinite_monkey_theorem) using Ruby
 
-[![Coverage Status](https://coveralls.io/repos/github/fo0s/10monkeys/badge.svg?branch=master)](https://coveralls.io/github/fo0s/10monkeys?branch=master&service=github)
+[![Coverage Status](https://coveralls.io/repos/github/fo0s/10monkeys/badge.svg?branch=master&service=github)](https://coveralls.io/github/fo0s/10monkeys?branch=master&service=github)
 [![Build Status](https://travis-ci.org/fo0s/10monkeys.svg?branch=master)](https://travis-ci.org/fo0s/10monkeys)
 
 ### For full documentation on the logic please refer to the [Documentation file](documentation.md)
