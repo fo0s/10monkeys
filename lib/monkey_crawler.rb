@@ -19,7 +19,8 @@ class MonkeyCrawler
 	monkey2 = Thread.new{monkey_crawler()}
 	monkey3 = Thread.new{monkey_crawler()}
 	monkey4 = Thread.new{monkey_crawler()}
-	monkey5 = Thread.new{monkey_crawler()}
+  monkey5 = Thread.new{monkey_crawler()}
+  return true
   end
 
   def monkey_crawler

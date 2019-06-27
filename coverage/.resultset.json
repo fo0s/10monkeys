@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/home/bart/Desktop/10monkeys/spec/data_sorter_spec.rb": [
+      "/home/random/Dropbox/Code/Projects/10monkeys/spec/data_sorter_spec.rb": [
         1,
         null,
         1,
@@ -20,7 +20,7 @@
         null,
         null
       ],
-      "/home/bart/Desktop/10monkeys/lib/data_sorter.rb": [
+      "/home/random/Dropbox/Code/Projects/10monkeys/lib/data_sorter.rb": [
         null,
         1,
         1,
@@ -49,7 +49,7 @@
         null,
         null
       ],
-      "/home/bart/Desktop/10monkeys/spec/database_spreadsheet_spec.rb": [
+      "/home/random/Dropbox/Code/Projects/10monkeys/spec/database_spreadsheet_spec.rb": [
         1,
         null,
         1,
@@ -76,7 +76,7 @@
         null,
         null
       ],
-      "/home/bart/Desktop/10monkeys/lib/database_spreadsheet.rb": [
+      "/home/random/Dropbox/Code/Projects/10monkeys/lib/database_spreadsheet.rb": [
         1,
         null,
         null,
@@ -146,7 +146,7 @@
         null,
         null
       ],
-      "/home/bart/Desktop/10monkeys/spec/features/file_database_scrape_spec.rb": [
+      "/home/random/Dropbox/Code/Projects/10monkeys/spec/features/file_database_scrape_spec.rb": [
         1,
         null,
         1,
@@ -177,7 +177,7 @@
         null,
         null
       ],
-      "/home/bart/Desktop/10monkeys/spec/features_helper.rb": [
+      "/home/random/Dropbox/Code/Projects/10monkeys/spec/features_helper.rb": [
         1,
         1,
         1,
@@ -223,7 +223,7 @@
         null,
         null
       ],
-      "/home/bart/Desktop/10monkeys/lib/monkey_crawler.rb": [
+      "/home/random/Dropbox/Code/Projects/10monkeys/lib/monkey_crawler.rb": [
         1,
         null,
         null,
@@ -232,58 +232,59 @@
         1,
         null,
         1,
-        8,
-        8,
-        8,
-        8,
-        8,
-        8,
-        null,
-        null,
-        1,
-        0,
-        0,
-        0,
-        0,
-        0,
-        null,
-        null,
-        1,
-        2,
-        1,
-        1,
-        1,
-        8,
-        8,
-        null,
-        1,
-        null,
-        null,
-        null,
-        1,
-        1,
-        1,
-        null,
-        null,
-        1,
-        2,
-        2,
-        null,
-        2,
-        null,
-        null,
-        1,
-        2,
-        null,
-        null,
-        1,
-        10,
-        null,
+        9,
+        9,
+        9,
+        9,
+        9,
         9,
         null,
+        null,
+        1,
+        2,
+        2,
+        2,
+        2,
+        2,
+        1,
+        null,
+        null,
+        1,
+        7,
+        6,
+        6,
+        6,
+        48,
+        48,
+        null,
+        5,
+        null,
+        null,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        7,
+        7,
+        null,
+        7,
+        null,
+        null,
+        1,
+        2,
+        null,
+        null,
+        1,
+        50,
+        null,
+        48,
+        null,
         null
       ],
-      "/home/bart/Desktop/10monkeys/lib/monkey_scraper.rb": [
+      "/home/random/Dropbox/Code/Projects/10monkeys/lib/monkey_scraper.rb": [
         1,
         1,
         1,
@@ -319,19 +320,14 @@
         null,
         null
       ],
-      "/home/bart/Desktop/10monkeys/spec/monkey_crawler_spec.rb": [
+      "/home/random/Dropbox/Code/Projects/10monkeys/spec/monkey_crawler_spec.rb": [
         1,
         null,
         1,
-        9,
+        10,
         null,
         1,
         1,
-        1,
-        1,
-        1,
-        null,
-        null,
         1,
         1,
         1,
@@ -345,6 +341,11 @@
         1,
         1,
         1,
+        null,
+        null,
+        1,
+        1,
+        1,
         1,
         null,
         null,
@@ -361,13 +362,18 @@
         1,
         null,
         null,
+        1,
+        1,
+        null,
+        null,
+        1,
         1,
         1,
         null,
         null,
         null
       ],
-      "/home/bart/Desktop/10monkeys/spec/monkey_scraper_spec.rb": [
+      "/home/random/Dropbox/Code/Projects/10monkeys/spec/monkey_scraper_spec.rb": [
         1,
         null,
         1,
@@ -381,6 +387,6 @@
         null
       ]
     },
-    "timestamp": 1561373686
+    "timestamp": 1561641180
   }
 }

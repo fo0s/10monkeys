@@ -42,5 +42,10 @@ describe 'Monkey crawler' do
     it 'fails a false site' do
       expect(@monkey.isAlive?('thisshouldreturnfalse')).to be false
     end
+
+    it 'checks if threads have been successfully started' do
+      @monkey.monkey_testing_state = true
+      expect(@monkey.start_monkeys).to be true
+    end
   end
 end
