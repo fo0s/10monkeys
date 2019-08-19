@@ -6,6 +6,7 @@ gem 'google-api-client'
 gem 'google_drive'
 gem 'httparty'
 gem 'nokogiri'
+gem 'pdf-reader'
 gem 'rake'
 
 group :test do

@@ -1,3 +1,5 @@
+require 'pdf/reader'
+
 # Loads a text file, sorts it and counts number of words
 class ComparativeData
   attr_reader :output
@@ -9,8 +11,29 @@ class ComparativeData
 
   def process_file
     hash_values = {}
+    
+
+    # Check if pdf file
+    contents = File.open(@input, 'r') { |f| f.read(8) }
+
+    if (contents =~ /\%PDF-\d\.\d/) == 0
+      # Convert from pdf to txt file
+      PDF::Reader.open(@input) do |reader|
+	      pdf_txt = reader.pages.map do |page|
+          begin
+            page.text
+          rescue
+            puts "Failed to convert"
+            ''
+          end
+        end
+        File.write @input + '.txt', pdf_txt.join("\n")
+        @input += '.txt'
+      end
+    end
+
+    # Process text file
     target_file = File.open(@input, 'r')
-    # Process each line
     target_file.each_line do |line|
       words = line.split
       words.each do |word|
@@ -23,5 +46,6 @@ class ComparativeData
     end
 
     true
+
   end
 end
