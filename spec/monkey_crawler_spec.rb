@@ -17,7 +17,7 @@ describe 'Monkey crawler' do
 
     it 'can be created and shut down' do
       @monkey.run_monkey = false
-      expect(@monkey.run_monkey).to equal false
+      expect(@monkey.run_monkey).to eq false
     end
 
     it 'wont run if in off mode' do

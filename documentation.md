@@ -17,13 +17,13 @@ There will have to be limitations applied.
 
 ## TODOs
 
-1. Intializer
+1. ~~Intializer~~
 2. File loader
-3. Web framework
+3. ~~Web framework~~
 4. ~~URL Randomizer~~
 5. ~~URL Validator~~
-6. Data sorter
-7. Integration with Goolge Sheets
-8. Data logic comparason 
-9. Basic frontend
+6. ~~Data sorter~
+7. ~~Integration with Goolge Sheets~~
+8. Data logic comparason
+9. ~~Basic frontend~~
 10. Dashboard

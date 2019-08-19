@@ -30,16 +30,20 @@ Google API (Database)
 
 Clone this repo
 
-> git clone https://github.com/fo0s/10monkeys.git
+> ### git clone https://github.com/fo0s/10monkeys.git
 
 Navigate to the folder
 
-> cd 10monkeys
+> ### cd 10monkeys
 
 Run Bundler to install dependencies
 
-> sudo bundler install
+> ### bundler install
 
-Reference to Google APIS for database  
-Reference to run the dashboard locally
+Load the landing page
 
+> ### ruby app.rb
+
+Load in the a `.pdf` or `.txt` file and the app will break it down.
+You will be redirected to a dashboard page which will keep
+you updated on it's progess.
