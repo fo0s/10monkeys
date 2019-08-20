@@ -1,7 +1,9 @@
+# frozen_string_literal: true
+
 require 'database_spreadsheet'
 
 describe 'Database spreadsheet' do
-  context '#write and read- ' do
+  context '#write and read file- ' do
     before(:all) do
       @data = GoogleDatabase.new
       @data.worksheet_database(:book)

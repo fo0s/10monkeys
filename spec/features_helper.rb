@@ -1,3 +1,4 @@
+require 'spec_helper'
 require 'data_sorter'
 require 'database_spreadsheet'
 require 'monkey_crawler'
@@ -42,3 +43,5 @@ def change_the_reader(feature_input)
     @feature_database.worksheet_database(:web)
   end
 end
+
+def monkey_status; end

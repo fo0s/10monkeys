@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'google_drive'
 
 # Google sheets database interaction

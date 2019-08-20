@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'monkey_crawler'
 
 describe 'Monkey crawler' do

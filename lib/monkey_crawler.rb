@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'net/http'
 
 # Crawl my beauties!!
@@ -11,16 +13,16 @@ class MonkeyCrawler
     @monkeys = []
     @site_hits = 0
     @sites_created = 0
-    @domains = [ '.com', '.io', '.gov', '.edu', '.net', '.org', '.xyz', '.tech' ]
+    @domains = ['.com', '.io', '.gov', '.edu', '.net', '.org', '.xyz', '.tech']
   end
-  
+
   def start_monkeys
-	monkey1 = Thread.new{monkey_crawler()}
-	monkey2 = Thread.new{monkey_crawler()}
-	monkey3 = Thread.new{monkey_crawler()}
-	monkey4 = Thread.new{monkey_crawler()}
-  monkey5 = Thread.new{monkey_crawler()}
-  return true
+    monkey1 = Thread.new { monkey_crawler }
+    monkey2 = Thread.new { monkey_crawler }
+    monkey3 = Thread.new { monkey_crawler }
+    monkey4 = Thread.new { monkey_crawler }
+    monkey5 = Thread.new { monkey_crawler }
+    true
   end
 
   def monkey_crawler
@@ -41,7 +43,7 @@ class MonkeyCrawler
   end
 
   def randomize_site
-	min_length = 2
+    min_length = 2
     max_length = rand(4..12)
 
     ('a'..'z').to_a.shuffle[min_length, max_length].join

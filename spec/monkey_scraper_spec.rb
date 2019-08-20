@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'monkey_scraper'
 
 describe 'Monkey Scraper' do
